@@ -26,8 +26,8 @@ for i in passwords:
         countTwo += 1
 
 
-print(countOne)
-print(countTwo)
+print("Part One: ", countOne)
+print("Part Two: ", countTwo)
 
 
 inputFile.close()
