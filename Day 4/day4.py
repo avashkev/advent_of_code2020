@@ -53,7 +53,7 @@ def isValidValue(key, value):
     elif key == 'pid':
         if len(value) == 9:
             pattern = r'\d{9}'
-            print(re.match(pattern,value))
+          #  print(re.match(pattern,value))
             if re.match(pattern,value):
                 isValid = True
             else:
@@ -155,11 +155,11 @@ if __name__ == "__main__":
         isValid = isValidPassport(passport)
         if isValid:
             countValid += 1
-            passport = sorted(passport.items())
-            print("Passport #", countPassport, passport, " is ", isValid)
+           # passport = sorted(passport.items())
+           # print("Passport #", countPassport, passport, " is ", isValid)
         
         
-    print("Total Passports: ", countPassport)
+  #  print("Total Passports: ", countPassport)
     print("Valid Passports: ", countValid)
     
 
