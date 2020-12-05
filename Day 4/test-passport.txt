@@ -1,0 +1,42 @@
+passport1 = {"ecl": "gry",
+             "pid": "860033327",
+             "eyr": "2020",
+             "hcl": "#fffffd",
+             "byr": "1937",
+             "iyr": "2017",
+             "cid": "147",
+             "hgt": "183cm"}
+
+passport2 = {"iyr": "2013",
+             "ecl": "amb",
+             "cid": "350",
+             "eyr": "2023",
+             "pid": "028048884",
+             "hcl": "#cfa07d",
+             "byr": "1929"}
+    
+passport3 = {"hcl": "#ae17e1",
+             "iyr": "2013",
+             "eyr": "2024",
+             "ecl": "brn",
+             "pid": "760753108",
+             "byr": "1931",
+             "hgt": "179cm"}
+
+   byr = {"byr": "2002", #valid
+            "byr": "2003"}#not valid
+
+    hgt = {"hgt": "60in",   #valid
+            "hgt": "190cm", #valid
+            "hgt": "190in", #not valid
+            "hgt": "190"}  #not valid
+
+    hcl = {"hcl": "#123abc",   #valid
+            "hcl": "#123abz", #valid
+            "hcl": "123abc"}  #not valid
+
+    ecl = {"hcl": "brn",   #valid
+            "hcl": "wat"} #valid
+
+    pid = {"pid": "000000001",  #valid
+            "pid": "0123456789"}#not valid
