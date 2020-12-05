@@ -59,40 +59,14 @@ def isValidPassport(passport):
             isValid = False
 
     return isValid
-    
-def parsePassportData(passportData):
-    passports = []
-
-    data = {}
-
-    
-
-    counter = 0
-    for el in passportData:
-        counter += 1 
-        for e in el:
-            line = e.strip().split()
-            if len(line) == 0:
-                passports.append(data)
-                data = {}
-            else:
-                for l in line:
-                    pair = l.split(':')
-                    key = pair[0]
-                    value = pair[1]
-                    data[key] = value
-                if counter == len(passportData):
-                    passports.append(data)
-
-    return passports
    
-
 if __name__ == "__main__":
     filepath = sys.argv[1]
     file = open(filepath)
     
     array = file.read().split('\n\n')
     pattern = re.compile('(?P<key>[a-z]{3}):(?P<value>[^ \n]+)', re.MULTILINE)
+    
     allPassports = []
     for el in array:
         allPassports.append(dict(pattern.findall(el)))
@@ -105,10 +79,3 @@ if __name__ == "__main__":
             countValid += 1
 
     print("Valid Passports: ", countValid)
-    
-
-
-
-
-
-    
