@@ -70,5 +70,5 @@ if __name__ == "__main__":
     outputfile.writelines(str(seats))
 
     print("seat ID:", seatID)
-    print(max("highest seat ID:", seats))
+    print("highest seat ID:", max(seats))
     # print(passes)
